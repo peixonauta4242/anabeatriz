@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feliz Aniversário, Meu Amor 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts (estilo dorama) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #fde2e4, #e0c3fc, #fef6e4);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      color: #333;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://melhoresdoramas.com.br/wp-content/webp-express/webp-images/uploads/2024/02/parceira-suspeita-1-1-1024x683.png.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.55; /* visível */
+  z-index: 1;
+}
+
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 3rem;
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .heart {
+      color: #ff5d8f;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .photo-card {
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      transition: transform 0.4s;
+    }
+
+    .photo-card:hover {
+      transform: scale(1.05);
+    }
+
+    .photo-placeholder {
+      height: 300px;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .quote {
+      font-style: italic;
+      background: rgba(255,255,255,0.6);
+      padding: 2rem;
+      border-radius: 1.5rem;
+    }
+
+    footer {
+      background: rgba(255,255,255,0.7);
+      padding: 1.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <section id="login" class="hero">
+    <div class="hero-content">
+      <h1 class="mb-3">Nosso Dorama Secreto 💕</h1>
+      <p class="mb-4">Somente quem sabe a data do nosso primeiro beijo pode entrar.</p>
+      <div class="mb-3">
+        <input type="text" id="kissDate" class="form-control form-control-lg" placeholder="DD/MM/AAAA" />
+      </div>
+      <button class="btn btn-lg btn-danger" onclick="login()">Entrar no Dorama</button>
+      <p id="error" class="mt-3 text-danger d-none">Data incorreta… tente lembrar daquele dia especial 💔</p>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div id="content" class="d-none">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="mb-3">Feliz Aniversário, Meu amor <span class="heart">❤</span></h1>
+        <p class="lead">Como em um dorama, nossa história tem romance, risadas e cenas inesquecíveis.</p>
+      </div>
+    </section>
+
+ <style>
+  .carousel-box {
+    height: 300px;
+    background: #fff;
+  }
+
+  .carousel-box img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+</style>
+
+<!-- GALERIA EM BLOCOS (6 FOTOS – FUNCIONAL) -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Nossos Momentos 💞</h2>
+
+  <div class="row g-4">
+
+    <!-- BLOCO 1 -->
+    <div class="col-md-4">
+      <div id="carousel1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner rounded-4 shadow carousel-box d-flex align-items-center">
+
+          <div class="carousel-item active text-center">
+            <img src="img/casal1.jpg" class="img-fluid mx-auto">
+          </div>
+
+          <div class="carousel-item text-center">
+            <img src="img/casal2.jpg" class="img-fluid mx-auto">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCO 2 -->
+    <div class="col-md-4">
+      <div id="carousel2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+        <div class="carousel-inner rounded-4 shadow carousel-box d-flex align-items-center">
+
+          <div class="carousel-item active text-center">
+            <img src="img/casal3.jpg" class="img-fluid mx-auto">
+          </div>
+
+          <div class="carousel-item text-center">
+            <img src="img/casal4.jpg" class="img-fluid mx-auto">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCO 3 -->
+    <div class="col-md-4">
+      <div id="carousel3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner rounded-4 shadow carousel-box d-flex align-items-center">
+
+          <div class="carousel-item active text-center">
+            <img src="img/casal5.jpg" class="img-fluid mx-auto">
+          </div>
+
+          <div class="carousel-item text-center">
+            <img src="img/casal6.jpg" class="img-fluid mx-auto">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+    <!-- MENSAGEM -->
+    <section class="container my-5">
+      <div class="quote text-center">
+        <p class="fs-4">"Se isso fosse um dorama, eu escolheria você em todos os episódios."</p>
+        <p class="fw-semibold">Te amo até o céu!</p>
+      </div>
+    </section>
+
+
+    <!-- CARTA CATÓLICA -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Minha Carta Para Você 💌</h2>
+
+  <div class="quote text-start fs-5">
+
+    <p><strong>Meu amor,</strong></p>
+
+    <p>
+      Hoje agradeço a Deus pela sua vida. Antes mesmo de te conhecer,
+      Ele já sabia que você faria parte da minha história.
+    </p>
+
+    <p>
+      Você é um presente que não veio por acaso. Veio no tempo certo,
+      do jeito certo, com o cuidado de um Deus que ama detalhes.
+      Quando penso em você, meu coração repete:
+      <em>“Esta é aquela que minha alma ama”</em> (Cânticos 3,4).
+    </p>
+
+    <p>
+      Nosso primeiro beijo não foi apenas um momento bonito,
+      foi um marco. Um daqueles instantes que a gente guarda
+      em silêncio e gratidão. Porque o amor verdadeiro
+      não faz barulho, ele cria raízes.
+      <em>“O amor é paciente, o amor é bondoso.”</em>
+    </p>
+
+    <p>
+      Eu admiro sua fé, sua delicadeza, sua força.
+      Você me lembra que amar também é rezar.
+      Que amar é desejar o céu para o outro.
+    </p>
+
+    <p>
+      Rezo para que Deus te guarde,
+      te proteja e te conduza.
+      Que Nossa Senhora te cubra com seu manto
+      e te ensine a confiar mesmo quando o coração se cansa.
+      <em>“O Senhor te abençoe e te guarde”</em> (Números 6,24).
+    </p>
+
+    <p>
+      Se a nossa história continuar sendo escrita,
+      que seja sempre sob a vontade de Deus.
+      Porque quando Ele está no centro,
+      tudo encontra sentido.
+    </p>
+
+    <p>
+      Hoje, no seu aniversário,
+      minha oração é simples:
+      que você seja feliz,
+      que nunca perca sua fé
+      e que saiba que é profundamente amada.
+    </p>
+
+    <p class="fw-semibold text-end mt-4">
+      Com carinho, oração e amor,<br>
+      🤍 Gabriel
+    </p>
+
+  </div>
+</section>
+
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Feito com ❤ especialmente para você</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // ALTERE A DATA AQUI (YYYY-MM-DD)
+    // ALTERE PARA A DATA DO PRIMEIRO BEIJO (DD/MM/AAAA)
+    const correctDate = "08/11/2025";
+
+    function login() {
+      const input = document.getElementById("kissDate").value.trim();
+      if (input === correctDate) {
+        document.getElementById("login").classList.add("d-none");
+        document.getElementById("content").classList.remove("d-none");
+      } else {
+        document.getElementById("error").classList.remove("d-none");
+      }
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

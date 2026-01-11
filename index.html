@@ -14,9 +14,8 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, #fde2e4, #e0c3fc, #fef6e4);
-      background-size: 400% 400%;
-      animation: gradientMove 15s ease infinite;
+      background-image: url("img/guadalupe.png");
+    
       color: #333;
     }
 
@@ -40,7 +39,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("https://melhoresdoramas.com.br/wp-content/webp-express/webp-images/uploads/2024/02/parceira-suspeita-1-1-1024x683.png.webp");
+  background-image: url("img/rosas.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -113,12 +112,12 @@
   <!-- LOGIN -->
   <section id="login" class="hero">
     <div class="hero-content">
-      <h1 class="mb-3">Nosso Dorama Secreto 💕</h1>
-      <p class="mb-4">Somente quem sabe a data do nosso primeiro beijo pode entrar.</p>
+      <h1 class="mb-3">Sob o Manto de Guadalupe 💙</h1>
+      <p class="mb-4">💙Acesse com a data da sua consagração💙</p>
       <div class="mb-3">
         <input type="text" id="kissDate" class="form-control form-control-lg" placeholder="DD/MM/AAAA" />
       </div>
-      <button class="btn btn-lg btn-danger" onclick="login()">Entrar no Dorama</button>
+      <button class="btn btn-lg btn-danger" onclick="login()">Entrar</button>
       <p id="error" class="mt-3 text-danger d-none">Data incorreta… tente lembrar daquele dia especial 💔</p>
     </div>
   </section>
@@ -130,7 +129,8 @@
     <section class="hero">
       <div class="hero-content">
         <h1 class="mb-3">Feliz Aniversário, Meu amor <span class="heart">❤</span></h1>
-        <p class="lead">Como em um dorama, nossa história tem romance, risadas e cenas inesquecíveis.</p>
+        <p class="lead">Assim como Nossa Senhora de Guadalupe se fez presença de amor e cuidado,
+você também é um sinal de ternura e luz na minha vida.</p>
       </div>
     </section>
 
@@ -149,8 +149,9 @@
 
 <!-- GALERIA EM BLOCOS (6 FOTOS – FUNCIONAL) -->
 <section class="container my-5">
-  <h2 class="text-center mb-4">Nossos Momentos 💞</h2>
-
+  <h2 class="text-center mb-4 text-white fw-bold">Nossos Momentos 💞</h2>
+  <p class="lead text-white text-center">“Sob o olhar de Maria,
+minha escolha sempre seria você.”</p>
   <div class="row g-4">
 
     <!-- BLOCO 1 -->
@@ -213,7 +214,12 @@
     <!-- MENSAGEM -->
     <section class="container my-5">
       <div class="quote text-center">
-        <p class="fs-4">"Se isso fosse um dorama, eu escolheria você em todos os episódios."</p>
+        <p class="fs-4">Eu peço a Nossa Senhora de Guadalupe
+que cuide do seu coração,
+dos seus passos
+e de tudo aquilo que você ainda sonha viver.
+
+Caminhar ao seu lado é uma bênção.</p>
         <p class="fw-semibold">Te amo até o céu!</p>
       </div>
     </section>
@@ -221,7 +227,7 @@
 
     <!-- CARTA CATÓLICA -->
 <section class="container my-5">
-  <h2 class="text-center mb-4">Minha Carta Para Você 💌</h2>
+  <h2 class="text-center mb-4 text-white fw-bold">Minha Carta Para Você 💌</h2>
 
   <div class="quote text-start fs-5">
 
@@ -294,8 +300,7 @@
 
   <script>
     // ALTERE A DATA AQUI (YYYY-MM-DD)
-    // ALTERE PARA A DATA DO PRIMEIRO BEIJO (DD/MM/AAAA)
-    const correctDate = "08/11/2025";
+    const correctDate = "01012026";
 
     function login() {
       const input = document.getElementById("kissDate").value.trim();
